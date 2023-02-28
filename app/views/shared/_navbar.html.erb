@@ -1,31 +1,29 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Venison Cookbook</a>
+    <%= link_to 'Recipe Book', root_path, class: "navbar-brand" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <%= link_to 'Home', root_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/about">What is this?</a>
+          <%= link_to 'About', about_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             User Actions
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Login</a></li>
-            <li><a class="dropdown-item" href="#">Saved Recipes</a></li>
-            <li><a class="dropdown-item" href="https://www.google.com/search?q=best+venison+recipes&oq=best+venison+recipes&aqs" target="_blank">Google some recipes!</a></li>
+            <li><%= link_to 'Login', login_path, class: "dropdown-item" %></li>
+            <li><%= link_to 'Create an Account', signup_path, class: "dropdown-item" %></li>
+            <li><%= link_to 'Saved Recipes', saved_path, class: "dropdown-item" %></li>
+            <li><a class="dropdown-item" href="https://www.google.com/search?q=best+recipes&newwindow=1&ei=BUP9Y5S1BYebptQPx6e--Aw&ved=0ahUKEwjUy5G_87b9AhWHjYkEHceTD88Q4dUDCBA&uact=5&oq=best+recipes&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIFCAAQkQIyBQgAEJECMgUIABCRAjIFCAAQkQIyBQgAEJECMggIABCABBCxAzIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeOgoIABBHENYEELADOgcIABCwAxBDSgQIQRgAUNsMWJMRYM0daAFwAXgAgAFkiAGvAZIBAzEuMZgBAKABAcgBCsABAQ&sclient=gws-wiz-serp" target="_blank">Google some recipes!</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">User Settings</a></li>
+            <li><%= link_to 'User Settings', settings_path, class: "dropdown-item" %></li>
           </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
         </li>
       </ul>
       <form class="d-flex" role="search">
